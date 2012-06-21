@@ -1,22 +1,18 @@
+exports.r2j = r2j;
+
 var FeedParser = require('feedparser')
   , parser
 
 parser = new FeedParser();
 
-jss = [];
 function toJSON(err, meta, articles){
-    if(err) console.error(err);
-    else {
-        articles.forEach(function (article) {
-        jss.push(JSON.stringify(article));
-        });
-    }
+    if(err) return console.error(err);
+    console.log(JSON.stringify(articles));
 }
 
-var rsj = function (uri){
+function r2j (uri,cb){
     parser.parseUrl(uri,toJSON);
-    return jss;
 }
 
-exports.rsj = rsj;
 
+//function rsj(uri,cb){ ... .parseUri(... function callback(){ cb(JSON.stringify(articles)) } ) } 
