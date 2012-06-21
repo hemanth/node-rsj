@@ -1,0 +1,17 @@
+{
+  "author": "Hemanth.HM <hemanth.hm@gmail.com> (h3manth.com)",
+  "name": "rsj",
+  "description": "Convert RSS to JSON",
+  "version": "0.0.0",
+  "homepage": "hemanth.github.com/node-rsj",
+  "repository": {
+    "url": "https://github.com/hemanth/node-rsj.git"
+  },
+  "main": "rsj",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
