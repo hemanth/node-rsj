@@ -7,8 +7,9 @@ parser = new FeedParser();
 
 function r2j (uri,cb){
     parser.parseUrl(uri,function(err, meta, articles){
-    if(err) return console.error(err);
-    cb(JSON.stringify(articles));
+        if(err) return console.error(err);
+        cb(JSON.stringify(articles));
+    });
 }
 
 
