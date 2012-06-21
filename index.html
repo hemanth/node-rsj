@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Node-rsj : rss in json" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Node-rsj</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hemanth/node-rsj">View on GitHub</a>
+
+          <h1 id="project_title">Node-rsj</h1>
+          <h2 id="project_tagline">rss in json</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hemanth/node-rsj/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hemanth/node-rsj/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>RSS in JSON using nodejs</h1>
+
+<p>All you have to do to use this is <code>npm install rjs</code></p>
+
+<p><em>EXAMPLE USAGE :</em></p>
+
+<pre><code>rsj = require('rsj');
+
+rsj.r2j('http://h3manth.com/rss.xml',function(json) { console.log(json);})
+
+[{
+    "title": "How caching matters in JS?",
+    "description": "&lt;p&gt;Caching plays a very important role, may it be on the client side or on the server side.&lt;/p&gt;\n\n&lt;p&gt;I tired to do a tittle benchmark test with benchmark.js and caching proved to benefit the performance remarkably.&lt;/p&gt;\n\n&lt;p&gt;To state the numbers, cache less query was 98% slower than the cached query!&lt;/p&gt;\n\n&lt;p&gt;It's Agreeable, that cache has it's on limitations on live objects, but it's worth a timely cache update in that case.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/how-caching-matter-js\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Caching plays a very important role, may it be on the client side or on the server side.&lt;/p&gt;\n\n&lt;p&gt;I tired to do a tittle benchmark test with benchmark.js and caching proved to benefit the performance remarkably.&lt;/p&gt;\n\n&lt;p&gt;To state the numbers, cache less query was 98% slower than the cached query!&lt;/p&gt;\n\n&lt;p&gt;It's Agreeable, that cache has it's on limitations on live objects, but it's worth a timely cache update in that case.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/how-caching-matter-js\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-19T10:42:59.000Z",
+    "pubdate": "2012-06-19T10:42:59.000Z",
+    "pubDate": "2012-06-19T10:42:59.000Z",
+    "link": "http://h3manth.com/content/how-caching-matter-js",
+    "guid": "364 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "How caching matters in JS?"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/how-caching-matter-js"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Caching plays a very important role, may it be on the client side or on the server side.&lt;/p&gt;\n\n&lt;p&gt;I tired to do a tittle benchmark test with benchmark.js and caching proved to benefit the performance remarkably.&lt;/p&gt;\n\n&lt;p&gt;To state the numbers, cache less query was 98% slower than the cached query!&lt;/p&gt;\n\n&lt;p&gt;It's Agreeable, that cache has it's on limitations on live objects, but it's worth a timely cache update in that case.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/how-caching-matter-js\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 19 Jun 2012 10:42:59 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "364 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Globbing in scripting languages",
+    "description": "&lt;p&gt;Globbing is the most common and yet the most powerful operation that any scripter would use.&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;glob() is a Unix library function that expands file names using a pattern-matching notation reminiscent of regular expression syntax but without the expressive power of true regular expressions.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;All most all the scripting languages has the globbing feature in them, yet here the mail focus in on &lt;strong&gt;bash, python, ruby, perl&lt;/strong&gt; as they are my favs!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/globbing-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Globbing is the most common and yet the most powerful operation that any scripter would use.&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;glob() is a Unix library function that expands file names using a pattern-matching notation reminiscent of regular expression syntax but without the expressive power of true regular expressions.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;All most all the scripting languages has the globbing feature in them, yet here the mail focus in on &lt;strong&gt;bash, python, ruby, perl&lt;/strong&gt; as they are my favs!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/globbing-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-18T14:39:25.000Z",
+    "pubdate": "2012-06-18T14:39:25.000Z",
+    "pubDate": "2012-06-18T14:39:25.000Z",
+    "link": "http://h3manth.com/content/globbing-scripting-languages",
+    "guid": "363 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Globbing in scripting languages"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/globbing-scripting-languages"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Globbing is the most common and yet the most powerful operation that any scripter would use.&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;glob() is a Unix library function that expands file names using a pattern-matching notation reminiscent of regular expression syntax but without the expressive power of true regular expressions.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;All most all the scripting languages has the globbing feature in them, yet here the mail focus in on &lt;strong&gt;bash, python, ruby, perl&lt;/strong&gt; as they are my favs!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/globbing-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Mon, 18 Jun 2012 14:39:25 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "363 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Inspecting Objects in Scripting",
+    "description": "&lt;p&gt;Examine the contents of a class / object is one of most useful and repetitive tasks that most of the coder do while debugging.&lt;/p&gt;\n\n&lt;p&gt;Here I try to focus on inspecting objects in scripting few of the major scripting languages that /me like.&lt;/p&gt;\n\n&lt;p&gt;Mainly &lt;strong&gt;JavaScript, Python, Ruby and Perl&lt;/strong&gt; shall be covered in this article, feel free to suggest your ways to doing this.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/inspecting-objects-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Examine the contents of a class / object is one of most useful and repetitive tasks that most of the coder do while debugging.&lt;/p&gt;\n\n&lt;p&gt;Here I try to focus on inspecting objects in scripting few of the major scripting languages that /me like.&lt;/p&gt;\n\n&lt;p&gt;Mainly &lt;strong&gt;JavaScript, Python, Ruby and Perl&lt;/strong&gt; shall be covered in this article, feel free to suggest your ways to doing this.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/inspecting-objects-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-14T17:50:22.000Z",
+    "pubdate": "2012-06-14T17:50:22.000Z",
+    "pubDate": "2012-06-14T17:50:22.000Z",
+    "link": "http://h3manth.com/content/inspecting-objects-scripting",
+    "guid": "362 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Inspecting Objects in Scripting"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/inspecting-objects-scripting"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Examine the contents of a class / object is one of most useful and repetitive tasks that most of the coder do while debugging.&lt;/p&gt;\n\n&lt;p&gt;Here I try to focus on inspecting objects in scripting few of the major scripting languages that /me like.&lt;/p&gt;\n\n&lt;p&gt;Mainly &lt;strong&gt;JavaScript, Python, Ruby and Perl&lt;/strong&gt; shall be covered in this article, feel free to suggest your ways to doing this.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/inspecting-objects-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Thu, 14 Jun 2012 17:50:22 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "362 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Handling Internationalized domain name (IDN) in scripting",
+    "description": "&lt;p&gt;&lt;a href=\"http://en.wikipedia.org/wiki/Internationalized_domain_name\"&gt;IDN&lt;/a&gt; is helping many, but caused a lot of trouble initially for many programming languages, specially in parsing and reading their contents.&lt;/p&gt;\n\n&lt;p&gt;The focus of this article is on scripting languages : &lt;strong&gt;bash&lt;/strong&gt;, &lt;strong&gt;perl&lt;/strong&gt;, &lt;strong&gt;python&lt;/strong&gt; and &lt;strong&gt;ruby&lt;/strong&gt; reading contents from an IDN or simply say an URL with unicode chars in them.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/handling-internationalized-domain-name-idn-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;a href=\"http://en.wikipedia.org/wiki/Internationalized_domain_name\"&gt;IDN&lt;/a&gt; is helping many, but caused a lot of trouble initially for many programming languages, specially in parsing and reading their contents.&lt;/p&gt;\n\n&lt;p&gt;The focus of this article is on scripting languages : &lt;strong&gt;bash&lt;/strong&gt;, &lt;strong&gt;perl&lt;/strong&gt;, &lt;strong&gt;python&lt;/strong&gt; and &lt;strong&gt;ruby&lt;/strong&gt; reading contents from an IDN or simply say an URL with unicode chars in them.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/handling-internationalized-domain-name-idn-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-13T16:02:33.000Z",
+    "pubdate": "2012-06-13T16:02:33.000Z",
+    "pubDate": "2012-06-13T16:02:33.000Z",
+    "link": "http://h3manth.com/content/handling-internationalized-domain-name-idn-scripting",
+    "guid": "361 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Handling Internationalized domain name (IDN) in scripting"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/handling-internationalized-domain-name-idn-scripting"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;a href=\"http://en.wikipedia.org/wiki/Internationalized_domain_name\"&gt;IDN&lt;/a&gt; is helping many, but caused a lot of trouble initially for many programming languages, specially in parsing and reading their contents.&lt;/p&gt;\n\n&lt;p&gt;The focus of this article is on scripting languages : &lt;strong&gt;bash&lt;/strong&gt;, &lt;strong&gt;perl&lt;/strong&gt;, &lt;strong&gt;python&lt;/strong&gt; and &lt;strong&gt;ruby&lt;/strong&gt; reading contents from an IDN or simply say an URL with unicode chars in them.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/handling-internationalized-domain-name-idn-scripting\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Wed, 13 Jun 2012 16:02:33 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "361 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Google hourly hot trends on command line",
+    "description": "&lt;p&gt;Well, /me back to pawing at Google from CLI, after few silly apps like getting the weather, news, sunrise and sets from terminal from me, again tonight before I hit the bed, did a silly ruby code to get the hourly hot trends on the CLI.&lt;/p&gt;\n\n&lt;p&gt;Even though the page had CDATA in it, ignored it fully, rather took advantage of it with nokogiri in ruby to get them all.&lt;/p&gt;\n\n&lt;p&gt;All you have to do is install the nokogiri gem and then try the tiny little script presented below.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/google-hourly-hot-trends-command-line\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Well, /me back to pawing at Google from CLI, after few silly apps like getting the weather, news, sunrise and sets from terminal from me, again tonight before I hit the bed, did a silly ruby code to get the hourly hot trends on the CLI.&lt;/p&gt;\n\n&lt;p&gt;Even though the page had CDATA in it, ignored it fully, rather took advantage of it with nokogiri in ruby to get them all.&lt;/p&gt;\n\n&lt;p&gt;All you have to do is install the nokogiri gem and then try the tiny little script presented below.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/google-hourly-hot-trends-command-line\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-12T17:33:44.000Z",
+    "pubdate": "2012-06-12T17:33:44.000Z",
+    "pubDate": "2012-06-12T17:33:44.000Z",
+    "link": "http://h3manth.com/content/google-hourly-hot-trends-command-line",
+    "guid": "360 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Google hourly hot trends on command line"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/google-hourly-hot-trends-command-line"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Well, /me back to pawing at Google from CLI, after few silly apps like getting the weather, news, sunrise and sets from terminal from me, again tonight before I hit the bed, did a silly ruby code to get the hourly hot trends on the CLI.&lt;/p&gt;\n\n&lt;p&gt;Even though the page had CDATA in it, ignored it fully, rather took advantage of it with nokogiri in ruby to get them all.&lt;/p&gt;\n\n&lt;p&gt;All you have to do is install the nokogiri gem and then try the tiny little script presented below.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/google-hourly-hot-trends-command-line\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 12 Jun 2012 17:33:44 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "360 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "ES6 in node.js",
+    "description": "&lt;p&gt;Well first for thanks to &lt;a href=\"http://paulmillr.com/\"&gt;paulmillr&lt;/a&gt; for his wonderful contribution of &lt;code&gt;es6-shim&lt;/code&gt; for node.js and browsers.&lt;/p&gt;\n\n&lt;p&gt;As ECMAScript 6 drafts gets better each day, /me had an itch to try it before the browser wars will implement them on after the other, this itch led me to try it with node.js and trust me it's awesome!&lt;/p&gt;\n\n&lt;p&gt;Well as of today, FF13 is the first browser to introduce &lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\"&gt;Sets and Maps API&lt;/a&gt; but we can try out the features in node.js right away.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/es6-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Well first for thanks to &lt;a href=\"http://paulmillr.com/\"&gt;paulmillr&lt;/a&gt; for his wonderful contribution of &lt;code&gt;es6-shim&lt;/code&gt; for node.js and browsers.&lt;/p&gt;\n\n&lt;p&gt;As ECMAScript 6 drafts gets better each day, /me had an itch to try it before the browser wars will implement them on after the other, this itch led me to try it with node.js and trust me it's awesome!&lt;/p&gt;\n\n&lt;p&gt;Well as of today, FF13 is the first browser to introduce &lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\"&gt;Sets and Maps API&lt;/a&gt; but we can try out the features in node.js right away.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/es6-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-11T13:55:49.000Z",
+    "pubdate": "2012-06-11T13:55:49.000Z",
+    "pubDate": "2012-06-11T13:55:49.000Z",
+    "link": "http://h3manth.com/content/es6-nodejs",
+    "guid": "359 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "ES6 in node.js"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/es6-nodejs"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Well first for thanks to &lt;a href=\"http://paulmillr.com/\"&gt;paulmillr&lt;/a&gt; for his wonderful contribution of &lt;code&gt;es6-shim&lt;/code&gt; for node.js and browsers.&lt;/p&gt;\n\n&lt;p&gt;As ECMAScript 6 drafts gets better each day, /me had an itch to try it before the browser wars will implement them on after the other, this itch led me to try it with node.js and trust me it's awesome!&lt;/p&gt;\n\n&lt;p&gt;Well as of today, FF13 is the first browser to introduce &lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\"&gt;Sets and Maps API&lt;/a&gt; but we can try out the features in node.js right away.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/es6-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Mon, 11 Jun 2012 13:55:49 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "359 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Get iframe contents using queryselectors",
+    "description": "&lt;p&gt;With few security issues and hassles &lt;strong&gt;iframes&lt;/strong&gt; has still managed to survive, the main reasons being :&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;iframes helps to beat the same origin policy and implements the cross domain origin policy.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;iframes allows multiple types of resources not just certain mime-types.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;May be &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;sandbox&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; srcdoc &lt;/code&gt;&lt;/span&gt; and &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;seamless &lt;/code&gt;&lt;/span&gt; will help many, also postMessage API!&lt;/p&gt;\n\n&lt;p&gt;But this article is not about explaining the good, bad and ugly of iframe, but its about selecting data from iframes!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/get-iframe-contents-using-queryselectors\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;With few security issues and hassles &lt;strong&gt;iframes&lt;/strong&gt; has still managed to survive, the main reasons being :&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;iframes helps to beat the same origin policy and implements the cross domain origin policy.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;iframes allows multiple types of resources not just certain mime-types.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;May be &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;sandbox&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; srcdoc &lt;/code&gt;&lt;/span&gt; and &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;seamless &lt;/code&gt;&lt;/span&gt; will help many, also postMessage API!&lt;/p&gt;\n\n&lt;p&gt;But this article is not about explaining the good, bad and ugly of iframe, but its about selecting data from iframes!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/get-iframe-contents-using-queryselectors\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-08T13:57:24.000Z",
+    "pubdate": "2012-06-08T13:57:24.000Z",
+    "pubDate": "2012-06-08T13:57:24.000Z",
+    "link": "http://h3manth.com/content/get-iframe-contents-using-queryselectors",
+    "guid": "358 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Get iframe contents using queryselectors"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/get-iframe-contents-using-queryselectors"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;With few security issues and hassles &lt;strong&gt;iframes&lt;/strong&gt; has still managed to survive, the main reasons being :&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;iframes helps to beat the same origin policy and implements the cross domain origin policy.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;iframes allows multiple types of resources not just certain mime-types.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;May be &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;sandbox&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; srcdoc &lt;/code&gt;&lt;/span&gt; and &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;seamless &lt;/code&gt;&lt;/span&gt; will help many, also postMessage API!&lt;/p&gt;\n\n&lt;p&gt;But this article is not about explaining the good, bad and ugly of iframe, but its about selecting data from iframes!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/get-iframe-contents-using-queryselectors\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Fri, 08 Jun 2012 13:57:24 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "358 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "What's the deal with on{X} ?",
+    "description": "&lt;p&gt;&lt;strong&gt;M$cro$fot has made a big move!&lt;/strong&gt; is it a realisation that open source (rather free) software/platform is the way to go or it is some more microsofty?&lt;/p&gt;\n\n&lt;p&gt;/me tired to read between the code and has tired to crack the mystery behind on{x}&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On{x} is a M$ online platform for automating android smart phones! Yes I said ANDROID&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/whats-deal-onx\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;strong&gt;M$cro$fot has made a big move!&lt;/strong&gt; is it a realisation that open source (rather free) software/platform is the way to go or it is some more microsofty?&lt;/p&gt;\n\n&lt;p&gt;/me tired to read between the code and has tired to crack the mystery behind on{x}&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On{x} is a M$ online platform for automating android smart phones! Yes I said ANDROID&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/whats-deal-onx\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-07T14:06:03.000Z",
+    "pubdate": "2012-06-07T14:06:03.000Z",
+    "pubDate": "2012-06-07T14:06:03.000Z",
+    "link": "http://h3manth.com/content/whats-deal-onx",
+    "guid": "357 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "What's the deal with on{X} ?"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/whats-deal-onx"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;strong&gt;M$cro$fot has made a big move!&lt;/strong&gt; is it a realisation that open source (rather free) software/platform is the way to go or it is some more microsofty?&lt;/p&gt;\n\n&lt;p&gt;/me tired to read between the code and has tired to crack the mystery behind on{x}&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On{x} is a M$ online platform for automating android smart phones! Yes I said ANDROID&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/whats-deal-onx\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Thu, 07 Jun 2012 14:06:03 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "357 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Reading logs made easy with bash.",
+    "description": "&lt;p&gt;Most of the web programmers would normally look into their applications/server error logs when they find issues, indeed it's a pain when the log path is filled with directories, it's sometimes annoying to do an &lt;bash&gt; ls -l&lt;/bash&gt;\n and look for the latest directory and then cd it, a bit better case is when one &lt;bash&gt;tab_completes&lt;/bash&gt; to change directories.&lt;/p&gt;\n\n&lt;p&gt;It would be very easy if we could &lt;strong&gt;cdn&lt;/strong&gt; as in cd to the new dir ;)&lt;/p&gt;\n\n&lt;p&gt;So /me tired some silly script that would make my life easier, do add it to your &lt;bash&gt;~/.bash.rc &lt;/bash&gt; if we like it!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/reading-logs-made-easy-bash\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Most of the web programmers would normally look into their applications/server error logs when they find issues, indeed it's a pain when the log path is filled with directories, it's sometimes annoying to do an &lt;bash&gt; ls -l&lt;/bash&gt;\n and look for the latest directory and then cd it, a bit better case is when one &lt;bash&gt;tab_completes&lt;/bash&gt; to change directories.&lt;/p&gt;\n\n&lt;p&gt;It would be very easy if we could &lt;strong&gt;cdn&lt;/strong&gt; as in cd to the new dir ;)&lt;/p&gt;\n\n&lt;p&gt;So /me tired some silly script that would make my life easier, do add it to your &lt;bash&gt;~/.bash.rc &lt;/bash&gt; if we like it!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/reading-logs-made-easy-bash\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-07T13:17:17.000Z",
+    "pubdate": "2012-06-07T13:17:17.000Z",
+    "pubDate": "2012-06-07T13:17:17.000Z",
+    "link": "http://h3manth.com/content/reading-logs-made-easy-bash",
+    "guid": "356 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Reading logs made easy with bash."
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/reading-logs-made-easy-bash"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Most of the web programmers would normally look into their applications/server error logs when they find issues, indeed it's a pain when the log path is filled with directories, it's sometimes annoying to do an &lt;bash&gt; ls -l&lt;/bash&gt;\n and look for the latest directory and then cd it, a bit better case is when one &lt;bash&gt;tab_completes&lt;/bash&gt; to change directories.&lt;/p&gt;\n\n&lt;p&gt;It would be very easy if we could &lt;strong&gt;cdn&lt;/strong&gt; as in cd to the new dir ;)&lt;/p&gt;\n\n&lt;p&gt;So /me tired some silly script that would make my life easier, do add it to your &lt;bash&gt;~/.bash.rc &lt;/bash&gt; if we like it!&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/reading-logs-made-easy-bash\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Thu, 07 Jun 2012 13:17:17 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "356 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Sets and Maps in JavaScript",
+    "description": "&lt;p&gt;&lt;strong&gt;FF13 comes out with experimental support for ECMAScript 6 Map and Set objects.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;As maps and sets can be easily implemented without this support, they have been introduced as experimental support&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;It's important to note :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;An Object has a prototype, so there are default keys in the map. However, this can be bypassed using map =  Object.create(null).\n      The keys of an Object are Strings, where they can be any value for a Map.\n      You can get the size of a Map easily while you have to manually keep track of size for an Object.&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;strong&gt;FF13 comes out with experimental support for ECMAScript 6 Map and Set objects.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;As maps and sets can be easily implemented without this support, they have been introduced as experimental support&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;It's important to note :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;An Object has a prototype, so there are default keys in the map. However, this can be bypassed using map =  Object.create(null).\n      The keys of an Object are Strings, where they can be any value for a Map.\n      You can get the size of a Map easily while you have to manually keep track of size for an Object.&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-06T13:25:25.000Z",
+    "pubdate": "2012-06-06T13:25:25.000Z",
+    "pubDate": "2012-06-06T13:25:25.000Z",
+    "link": "http://h3manth.com/content/sets-and-maps-javascript",
+    "guid": "355 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Sets and Maps in JavaScript"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/sets-and-maps-javascript"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;strong&gt;FF13 comes out with experimental support for ECMAScript 6 Map and Set objects.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;As maps and sets can be easily implemented without this support, they have been introduced as experimental support&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;It's important to note :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;An Object has a prototype, so there are default keys in the map. However, this can be bypassed using map =  Object.create(null).\n      The keys of an Object are Strings, where they can be any value for a Map.\n      You can get the size of a Map easily while you have to manually keep track of size for an Object.&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/sets-and-maps-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Wed, 06 Jun 2012 13:25:25 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "355 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Ninja Object Properties in Scripting languages",
+    "description": "&lt;p&gt;10 hours ago, came across atrick-wied's ninja object properties in JavaScript, that speaks of code as below.&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;var&lt;/span&gt; x &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;  &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n\n&lt;p&gt;This is not very obfuscated JS-code, but indeed fun to see spaces as object properties and space as &lt;strong&gt;✐&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On the same lines out of interest tried exploring the same property in other languages&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/ninja-object-properties-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;10 hours ago, came across atrick-wied's ninja object properties in JavaScript, that speaks of code as below.&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;var&lt;/span&gt; x &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;  &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n\n&lt;p&gt;This is not very obfuscated JS-code, but indeed fun to see spaces as object properties and space as &lt;strong&gt;✐&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On the same lines out of interest tried exploring the same property in other languages&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/ninja-object-properties-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-06T04:35:20.000Z",
+    "pubdate": "2012-06-06T04:35:20.000Z",
+    "pubDate": "2012-06-06T04:35:20.000Z",
+    "link": "http://h3manth.com/content/ninja-object-properties-scripting-languages",
+    "guid": "354 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Ninja Object Properties in Scripting languages"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/ninja-object-properties-scripting-languages"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;10 hours ago, came across atrick-wied's ninja object properties in JavaScript, that speaks of code as below.&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;var&lt;/span&gt; x &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;&lt;span style=\"color: #3366CC;\"&gt;&amp;quot;  &amp;quot;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;\n&amp;nbsp;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;1&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;2&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;3&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\nx&lt;span style=\"color: #009900;\"&gt;&amp;#91;&lt;/span&gt;String.&lt;span style=\"color: #660066;\"&gt;fromCharCode&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#93;&lt;/span&gt; &lt;span style=\"color: #339933;\"&gt;=&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;4&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&amp;nbsp;\nconsole.&lt;span style=\"color: #660066;\"&gt;log&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;x&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n\n&lt;p&gt;This is not very obfuscated JS-code, but indeed fun to see spaces as object properties and space as &lt;strong&gt;✐&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;On the same lines out of interest tried exploring the same property in other languages&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/ninja-object-properties-scripting-languages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Wed, 06 Jun 2012 04:35:20 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "354 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "HTML5+
+ JS offline/online notification",
+    "description": "&lt;p&gt;Before diving into HTML5+JS offline/online notification, try the &lt;a href=\"http://h3manth.com/demo/notification.html\"&gt;demo&lt;/a&gt; or if you are lazy see the &lt;a href=\"http://youtu.be/V8z-QO9RwY0\"&gt;video&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;With evolution of  HTML5 and some javascript magic, it's very easy for a webpage/webapp to indicate if the user is offline or online.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;But what's the use?!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Avoiding user hitting the refresh button!&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;As a responsible app, it's neat if it does so?&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Can indicate the user when to try again, with timeouts.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Notify me, if you got something ;)&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/html5js-offlineonline-notification\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Before diving into HTML5+JS offline/online notification, try the &lt;a href=\"http://h3manth.com/demo/notification.html\"&gt;demo&lt;/a&gt; or if you are lazy see the &lt;a href=\"http://youtu.be/V8z-QO9RwY0\"&gt;video&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;With evolution of  HTML5 and some javascript magic, it's very easy for a webpage/webapp to indicate if the user is offline or online.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;But what's the use?!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Avoiding user hitting the refresh button!&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;As a responsible app, it's neat if it does so?&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Can indicate the user when to try again, with timeouts.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Notify me, if you got something ;)&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/html5js-offlineonline-notification\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-05T13:47:58.000Z",
+    "pubdate": "2012-06-05T13:47:58.000Z",
+    "pubDate": "2012-06-05T13:47:58.000Z",
+    "link": "http://h3manth.com/content/html5js-offlineonline-notification",
+    "guid": "353 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "HTML5+JS offline/online notification"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/html5js-offlineonline-notification"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Before diving into HTML5+JS offline/online notification, try the &lt;a href=\"http://h3manth.com/demo/notification.html\"&gt;demo&lt;/a&gt; or if you are lazy see the &lt;a href=\"http://youtu.be/V8z-QO9RwY0\"&gt;video&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;With evolution of  HTML5 and some javascript magic, it's very easy for a webpage/webapp to indicate if the user is offline or online.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;But what's the use?!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;Avoiding user hitting the refresh button!&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;As a responsible app, it's neat if it does so?&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Can indicate the user when to try again, with timeouts.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Notify me, if you got something ;)&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/html5js-offlineonline-notification\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 05 Jun 2012 13:47:58 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "353 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "togist chrome plugin",
+    "description": "&lt;p&gt;This is a simple chrome plugin that /me managed to build which helps to create public gists on github.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;All you need to do is :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;1. Select some text/code on any webpage.\n\n2. Right click on the selection.\n\n3. Click on togist as you see in the screenshot \n\n4. Enjoy! \n&lt;/code&gt;&lt;/pre&gt;\n\n&lt;p&gt;&lt;a href=\"https://chrome.google.com/webstore/detail/ddommmoecmndjejocdikjendidfoecal/details\"&gt;INSTALL IT&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/togist-chrome-plugin\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;This is a simple chrome plugin that /me managed to build which helps to create public gists on github.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;All you need to do is :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;1. Select some text/code on any webpage.\n\n2. Right click on the selection.\n\n3. Click on togist as you see in the screenshot \n\n4. Enjoy! \n&lt;/code&gt;&lt;/pre&gt;\n\n&lt;p&gt;&lt;a href=\"https://chrome.google.com/webstore/detail/ddommmoecmndjejocdikjendidfoecal/details\"&gt;INSTALL IT&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/togist-chrome-plugin\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-04T13:48:38.000Z",
+    "pubdate": "2012-06-04T13:48:38.000Z",
+    "pubDate": "2012-06-04T13:48:38.000Z",
+    "link": "http://h3manth.com/content/togist-chrome-plugin",
+    "guid": "352 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "togist chrome plugin"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/togist-chrome-plugin"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;This is a simple chrome plugin that /me managed to build which helps to create public gists on github.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;All you need to do is :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;1. Select some text/code on any webpage.\n\n2. Right click on the selection.\n\n3. Click on togist as you see in the screenshot \n\n4. Enjoy! \n&lt;/code&gt;&lt;/pre&gt;\n\n&lt;p&gt;&lt;a href=\"https://chrome.google.com/webstore/detail/ddommmoecmndjejocdikjendidfoecal/details\"&gt;INSTALL IT&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/togist-chrome-plugin\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Mon, 04 Jun 2012 13:48:38 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "352 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "JavaScript one liner extracting unique words from webpages",
+    "description": "&lt;p&gt;Unlike &lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\"&gt;JSON parsing with ruby one-liner ?&lt;/a&gt; this is indeed a very strong raw JavaScript one liner that /me managed to frame last weekend.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;So what's the deal?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Extracting all the words in a given webpage, which later can be used to parse or search!&lt;/p&gt;\n\n&lt;p&gt;The whole idea is to collect all the words in the page and create a set() out of it.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-one-liner-extracting-unique-words-webpages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Unlike &lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\"&gt;JSON parsing with ruby one-liner ?&lt;/a&gt; this is indeed a very strong raw JavaScript one liner that /me managed to frame last weekend.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;So what's the deal?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Extracting all the words in a given webpage, which later can be used to parse or search!&lt;/p&gt;\n\n&lt;p&gt;The whole idea is to collect all the words in the page and create a set() out of it.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-one-liner-extracting-unique-words-webpages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-04T05:21:41.000Z",
+    "pubdate": "2012-06-04T05:21:41.000Z",
+    "pubDate": "2012-06-04T05:21:41.000Z",
+    "link": "http://h3manth.com/content/javascript-one-liner-extracting-unique-words-webpages",
+    "guid": "351 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "JavaScript one liner extracting unique words from webpages"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/javascript-one-liner-extracting-unique-words-webpages"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Unlike &lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\"&gt;JSON parsing with ruby one-liner ?&lt;/a&gt; this is indeed a very strong raw JavaScript one liner that /me managed to frame last weekend.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;So what's the deal?&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Extracting all the words in a given webpage, which later can be used to parse or search!&lt;/p&gt;\n\n&lt;p&gt;The whole idea is to collect all the words in the page and create a set() out of it.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-one-liner-extracting-unique-words-webpages\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Mon, 04 Jun 2012 05:21:41 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "351 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Javascript ReferenceError: Invalid left-hand side in assignment",
+    "description": "&lt;p&gt;&lt;strong&gt;So lately was trying some silly syntax with javascript, logically it seems to work, but throw away your dry logic!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Most of us who have been pawing at some raw JS knows &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;undefined &lt;span style=\"color: #339933;\"&gt;||&lt;/span&gt; &lt;span style=\"color: #3366CC;\"&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;/code&gt;&lt;/span&gt; would result in \"hi\", on the same lines, /me tried :&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-referenceerror-invalid-left-hand-side-assignment\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;strong&gt;So lately was trying some silly syntax with javascript, logically it seems to work, but throw away your dry logic!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Most of us who have been pawing at some raw JS knows &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;undefined &lt;span style=\"color: #339933;\"&gt;||&lt;/span&gt; &lt;span style=\"color: #3366CC;\"&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;/code&gt;&lt;/span&gt; would result in \"hi\", on the same lines, /me tried :&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-referenceerror-invalid-left-hand-side-assignment\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-06-03T05:33:28.000Z",
+    "pubdate": "2012-06-03T05:33:28.000Z",
+    "pubDate": "2012-06-03T05:33:28.000Z",
+    "link": "http://h3manth.com/content/javascript-referenceerror-invalid-left-hand-side-assignment",
+    "guid": "350 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Javascript ReferenceError: Invalid left-hand side in assignment"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/javascript-referenceerror-invalid-left-hand-side-assignment"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;strong&gt;So lately was trying some silly syntax with javascript, logically it seems to work, but throw away your dry logic!&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Most of us who have been pawing at some raw JS knows &lt;span class=\"geshifilter\"&gt;&lt;code class=\"javascript geshifilter-javascript\"&gt;&amp;nbsp;undefined &lt;span style=\"color: #339933;\"&gt;||&lt;/span&gt; &lt;span style=\"color: #3366CC;\"&gt;&amp;quot;hi&amp;quot;&lt;/span&gt; &lt;/code&gt;&lt;/span&gt; would result in \"hi\", on the same lines, /me tried :&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/javascript-referenceerror-invalid-left-hand-side-assignment\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Sun, 03 Jun 2012 05:33:28 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "350 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Hitchhikers guide to npm",
+    "description": "&lt;p&gt;&lt;strong&gt;Hello hackers, this post is just a simple hello-world packing tutorial for packing nodejs with npm.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;P.S : This does not talk about how npm works in depth, but gets one started with npm and assumption is you have dealt with some nodejs and npm installs before!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;First up, if you have not installed node.js and npm (which is bundled with latest version) please do :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;$ bash &amp;lt; &amp;lt;(curl h3manth.com/njs)\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/hitchhikers-guide-npm\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;strong&gt;Hello hackers, this post is just a simple hello-world packing tutorial for packing nodejs with npm.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;P.S : This does not talk about how npm works in depth, but gets one started with npm and assumption is you have dealt with some nodejs and npm installs before!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;First up, if you have not installed node.js and npm (which is bundled with latest version) please do :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;$ bash &amp;lt; &amp;lt;(curl h3manth.com/njs)\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/hitchhikers-guide-npm\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-30T14:31:41.000Z",
+    "pubdate": "2012-05-30T14:31:41.000Z",
+    "pubDate": "2012-05-30T14:31:41.000Z",
+    "link": "http://h3manth.com/content/hitchhikers-guide-npm",
+    "guid": "349 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Hitchhikers guide to npm"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/hitchhikers-guide-npm"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;strong&gt;Hello hackers, this post is just a simple hello-world packing tutorial for packing nodejs with npm.&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;P.S : This does not talk about how npm works in depth, but gets one started with npm and assumption is you have dealt with some nodejs and npm installs before!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;First up, if you have not installed node.js and npm (which is bundled with latest version) please do :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;$ bash &amp;lt; &amp;lt;(curl h3manth.com/njs)\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/hitchhikers-guide-npm\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Wed, 30 May 2012 14:31:41 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "349 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "7 ruby gems in 7 days",
+    "description": "&lt;p&gt;&lt;strong&gt;So /me managed to write 7 silly ruby gems in 7 days, the below is a simple video demo of those 7 ruby gems :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://play.codestre.am/embed/9b3e1e0efa92feadedf675824\"&gt;DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;LInk to the gems&lt;/strong&gt;:&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/7-ruby-gems-7-days\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;strong&gt;So /me managed to write 7 silly ruby gems in 7 days, the below is a simple video demo of those 7 ruby gems :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://play.codestre.am/embed/9b3e1e0efa92feadedf675824\"&gt;DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;LInk to the gems&lt;/strong&gt;:&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/7-ruby-gems-7-days\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-26T06:46:05.000Z",
+    "pubdate": "2012-05-26T06:46:05.000Z",
+    "pubDate": "2012-05-26T06:46:05.000Z",
+    "link": "http://h3manth.com/content/7-ruby-gems-7-days",
+    "guid": "348 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "7 ruby gems in 7 days"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/7-ruby-gems-7-days"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;strong&gt;So /me managed to write 7 silly ruby gems in 7 days, the below is a simple video demo of those 7 ruby gems :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"http://play.codestre.am/embed/9b3e1e0efa92feadedf675824\"&gt;DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;LInk to the gems&lt;/strong&gt;:&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/7-ruby-gems-7-days\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Sat, 26 May 2012 06:46:05 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "348 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Notes from Build Awesome Command-Line apps",
+    "description": "&lt;p&gt;Lately I was going through book and talks on \"Build Awesome Command-Line Applications in Ruby: Control Your Computer, Simplify Your Life\" by David Bryant Copeland.&lt;/p&gt;\n\n&lt;p&gt;Major stuff /me noted down from it are as below :&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The UNIX Way&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;grepable (One \"record\" perline)&lt;/li&gt;\n&lt;li&gt;cutable (delimited \"fieIds\") &lt;/li&gt;\n&lt;li&gt;exit codes! (O for success, nonzero for failure)&lt;/li&gt;\n&lt;li&gt;messaging (stderr) vs. output (stdout)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/notes-build-awesome-command-line-apps\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Lately I was going through book and talks on \"Build Awesome Command-Line Applications in Ruby: Control Your Computer, Simplify Your Life\" by David Bryant Copeland.&lt;/p&gt;\n\n&lt;p&gt;Major stuff /me noted down from it are as below :&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The UNIX Way&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;grepable (One \"record\" perline)&lt;/li&gt;\n&lt;li&gt;cutable (delimited \"fieIds\") &lt;/li&gt;\n&lt;li&gt;exit codes! (O for success, nonzero for failure)&lt;/li&gt;\n&lt;li&gt;messaging (stderr) vs. output (stdout)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/notes-build-awesome-command-line-apps\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-20T05:18:18.000Z",
+    "pubdate": "2012-05-20T05:18:18.000Z",
+    "pubDate": "2012-05-20T05:18:18.000Z",
+    "link": "http://h3manth.com/content/notes-build-awesome-command-line-apps",
+    "guid": "347 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Notes from Build Awesome Command-Line apps"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/notes-build-awesome-command-line-apps"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Lately I was going through book and talks on \"Build Awesome Command-Line Applications in Ruby: Control Your Computer, Simplify Your Life\" by David Bryant Copeland.&lt;/p&gt;\n\n&lt;p&gt;Major stuff /me noted down from it are as below :&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The UNIX Way&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;grepable (One \"record\" perline)&lt;/li&gt;\n&lt;li&gt;cutable (delimited \"fieIds\") &lt;/li&gt;\n&lt;li&gt;exit codes! (O for success, nonzero for failure)&lt;/li&gt;\n&lt;li&gt;messaging (stderr) vs. output (stdout)&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/notes-build-awesome-command-line-apps\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Sun, 20 May 2012 05:18:18 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "347 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "TypeError: Object #&lt;NodeList&gt; has no method 'forEach' in javascript?",
+    "description": "&lt;p&gt;Iterating a NodeList in javascript using forEach due to temptation, you have defiantly come across &lt;strong&gt;TypeError: Object #&lt;NodeList&gt; has no method 'forEach'&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Before digging into the error, let's try to understand what a NodeList is!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;IDL Definition of NodeList is as below :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"c geshifilter-c\" style=\"font-family:monospace;\"&gt;interface NodeList &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n  Node               item&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;in &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt; index&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n  readonly attribute &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt;   length&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-object-nodelist-has-no-method-foreach-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Iterating a NodeList in javascript using forEach due to temptation, you have defiantly come across &lt;strong&gt;TypeError: Object #&lt;NodeList&gt; has no method 'forEach'&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Before digging into the error, let's try to understand what a NodeList is!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;IDL Definition of NodeList is as below :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"c geshifilter-c\" style=\"font-family:monospace;\"&gt;interface NodeList &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n  Node               item&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;in &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt; index&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n  readonly attribute &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt;   length&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-object-nodelist-has-no-method-foreach-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-18T18:01:14.000Z",
+    "pubdate": "2012-05-18T18:01:14.000Z",
+    "pubDate": "2012-05-18T18:01:14.000Z",
+    "link": "http://h3manth.com/content/typeerror-object-nodelist-has-no-method-foreach-javascript",
+    "guid": "346 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "TypeError: Object #&lt;NodeList&gt; has no method 'forEach' in javascript?"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/typeerror-object-nodelist-has-no-method-foreach-javascript"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Iterating a NodeList in javascript using forEach due to temptation, you have defiantly come across &lt;strong&gt;TypeError: Object #&lt;NodeList&gt; has no method 'forEach'&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Before digging into the error, let's try to understand what a NodeList is!&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;IDL Definition of NodeList is as below :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"c geshifilter-c\" style=\"font-family:monospace;\"&gt;interface NodeList &lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n  Node               item&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;in &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt; index&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n  readonly attribute &lt;span style=\"color: #993333;\"&gt;unsigned&lt;/span&gt; &lt;span style=\"color: #993333;\"&gt;long&lt;/span&gt;   length&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-object-nodelist-has-no-method-foreach-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Fri, 18 May 2012 18:01:14 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "346 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "JSON parsing with ruby one-liner ?",
+    "description": "&lt;p&gt;Parsing JSON is one of the most common tasks that any web developer does in his daily activities.&lt;/p&gt;\n\n&lt;p&gt;Parsing &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;JSON&lt;/code&gt;&lt;/span&gt; with &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;ruby&lt;/code&gt;&lt;/span&gt; with is fun and the fun multiples &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;n.times&lt;/code&gt;&lt;/span&gt; when the code is a &lt;strong&gt;one-liner&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Indeed some gems are needed along with ruby and rubygems, you shall need :&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"ruby geshifilter-ruby\" style=\"font-family:monospace;\"&gt;gem install rest&lt;span style=\"color:#006600; font-weight:bold;\"&gt;-&lt;/span&gt;client&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Parsing JSON is one of the most common tasks that any web developer does in his daily activities.&lt;/p&gt;\n\n&lt;p&gt;Parsing &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;JSON&lt;/code&gt;&lt;/span&gt; with &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;ruby&lt;/code&gt;&lt;/span&gt; with is fun and the fun multiples &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;n.times&lt;/code&gt;&lt;/span&gt; when the code is a &lt;strong&gt;one-liner&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Indeed some gems are needed along with ruby and rubygems, you shall need :&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"ruby geshifilter-ruby\" style=\"font-family:monospace;\"&gt;gem install rest&lt;span style=\"color:#006600; font-weight:bold;\"&gt;-&lt;/span&gt;client&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-18T06:26:15.000Z",
+    "pubdate": "2012-05-18T06:26:15.000Z",
+    "pubDate": "2012-05-18T06:26:15.000Z",
+    "link": "http://h3manth.com/content/json-parsing-ruby-one-liner",
+    "guid": "345 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "JSON parsing with ruby one-liner ?"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/json-parsing-ruby-one-liner"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Parsing JSON is one of the most common tasks that any web developer does in his daily activities.&lt;/p&gt;\n\n&lt;p&gt;Parsing &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;JSON&lt;/code&gt;&lt;/span&gt; with &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;ruby&lt;/code&gt;&lt;/span&gt; with is fun and the fun multiples &lt;span class=\"geshifilter\"&gt;&lt;code class=\"bash geshifilter-bash\"&gt;n.times&lt;/code&gt;&lt;/span&gt; when the code is a &lt;strong&gt;one-liner&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;Indeed some gems are needed along with ruby and rubygems, you shall need :&lt;/p&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"ruby geshifilter-ruby\" style=\"font-family:monospace;\"&gt;gem install rest&lt;span style=\"color:#006600; font-weight:bold;\"&gt;-&lt;/span&gt;client&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/json-parsing-ruby-one-liner\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Fri, 18 May 2012 06:26:15 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "345 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Native JS like jQuery",
+    "description": "&lt;p&gt;Lately was pawing at some [Selector API's][1] and really liked the raw power of native JS!&lt;/p&gt;\n\n&lt;p&gt;So here is some comaprsion of &lt;strong&gt;Native JS vs jQuery selectors&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;As jQuery uses \"$\" as a shortcut for \"jQuery\", lets defined a naughty $$ for making things much more easier. \n[ True! I can use  \"jQuery.noConflict()\".]&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;As per the standards The dollar sign ($) and the underscore (_) are permitted anywhere in an IdentifierName.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;function&lt;/span&gt; $$&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n&lt;span style=\"color: #000066; font-weight: bold;\"&gt;return&lt;/span&gt; Array.&lt;span style=\"color: #660066;\"&gt;prototype&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;slice&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;call&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;document.&lt;span style=\"color: #660066;\"&gt;querySelectorAll&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;0&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/native-js-jquery\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Lately was pawing at some [Selector API's][1] and really liked the raw power of native JS!&lt;/p&gt;\n\n&lt;p&gt;So here is some comaprsion of &lt;strong&gt;Native JS vs jQuery selectors&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;As jQuery uses \"$\" as a shortcut for \"jQuery\", lets defined a naughty $$ for making things much more easier. \n[ True! I can use  \"jQuery.noConflict()\".]&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;As per the standards The dollar sign ($) and the underscore (_) are permitted anywhere in an IdentifierName.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;function&lt;/span&gt; $$&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n&lt;span style=\"color: #000066; font-weight: bold;\"&gt;return&lt;/span&gt; Array.&lt;span style=\"color: #660066;\"&gt;prototype&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;slice&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;call&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;document.&lt;span style=\"color: #660066;\"&gt;querySelectorAll&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;0&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/native-js-jquery\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-14T11:07:27.000Z",
+    "pubdate": "2012-05-14T11:07:27.000Z",
+    "pubDate": "2012-05-14T11:07:27.000Z",
+    "link": "http://h3manth.com/content/native-js-jquery",
+    "guid": "344 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Native JS like jQuery"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/native-js-jquery"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Lately was pawing at some [Selector API's][1] and really liked the raw power of native JS!&lt;/p&gt;\n\n&lt;p&gt;So here is some comaprsion of &lt;strong&gt;Native JS vs jQuery selectors&lt;/strong&gt;&lt;/p&gt;\n\n&lt;p&gt;As jQuery uses \"$\" as a shortcut for \"jQuery\", lets defined a naughty $$ for making things much more easier. \n[ True! I can use  \"jQuery.noConflict()\".]&lt;/p&gt;\n\n&lt;blockquote&gt;\n  &lt;p&gt;As per the standards The dollar sign ($) and the underscore (_) are permitted anywhere in an IdentifierName.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;&lt;div class=\"geshifilter\"&gt;&lt;pre class=\"javascript geshifilter-javascript\" style=\"font-family:monospace;\"&gt;&lt;span style=\"color: #003366; font-weight: bold;\"&gt;function&lt;/span&gt; $$&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#123;&lt;/span&gt;\n&lt;span style=\"color: #000066; font-weight: bold;\"&gt;return&lt;/span&gt; Array.&lt;span style=\"color: #660066;\"&gt;prototype&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;slice&lt;/span&gt;.&lt;span style=\"color: #660066;\"&gt;call&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;document.&lt;span style=\"color: #660066;\"&gt;querySelectorAll&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#40;&lt;/span&gt;selector&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;,&lt;/span&gt; &lt;span style=\"color: #CC0000;\"&gt;0&lt;/span&gt;&lt;span style=\"color: #009900;\"&gt;&amp;#41;&lt;/span&gt;&lt;span style=\"color: #339933;\"&gt;;&lt;/span&gt;\n&lt;span style=\"color: #009900;\"&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/native-js-jquery\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Mon, 14 May 2012 11:07:27 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "344 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "URL scrapping with javascript",
+    "description": "&lt;p&gt;Quite some time ago /me had coded a small entry on &lt;a href=\"http://www.h3manth.com/node/177/backlinks\"&gt;Hyperlink to URL &amp;amp;&amp;amp; Extracting all the links from a site&lt;/a&gt; which was much of a terminal based scrapping.&lt;/p&gt;\n\n&lt;p&gt;Lately I was playing around with different possible ways of extracting URLs from a give webpage using plain and raw javascript, the idea was to figure out which of the different possible ways is the best and how.&lt;/p&gt;\n\n&lt;p&gt;A simple comparison of different methods is demonstrated in this entry.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The focus of this writeup  :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;List out the possible ways of extracting URLs.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Do a performance review of them.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Select the best out of the lot.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/url-scraping-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Quite some time ago /me had coded a small entry on &lt;a href=\"http://www.h3manth.com/node/177/backlinks\"&gt;Hyperlink to URL &amp;amp;&amp;amp; Extracting all the links from a site&lt;/a&gt; which was much of a terminal based scrapping.&lt;/p&gt;\n\n&lt;p&gt;Lately I was playing around with different possible ways of extracting URLs from a give webpage using plain and raw javascript, the idea was to figure out which of the different possible ways is the best and how.&lt;/p&gt;\n\n&lt;p&gt;A simple comparison of different methods is demonstrated in this entry.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The focus of this writeup  :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;List out the possible ways of extracting URLs.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Do a performance review of them.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Select the best out of the lot.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/url-scraping-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-12T07:41:26.000Z",
+    "pubdate": "2012-05-12T07:41:26.000Z",
+    "pubDate": "2012-05-12T07:41:26.000Z",
+    "link": "http://h3manth.com/content/url-scraping-javascript",
+    "guid": "343 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "URL scrapping with javascript"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/url-scraping-javascript"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Quite some time ago /me had coded a small entry on &lt;a href=\"http://www.h3manth.com/node/177/backlinks\"&gt;Hyperlink to URL &amp;amp;&amp;amp; Extracting all the links from a site&lt;/a&gt; which was much of a terminal based scrapping.&lt;/p&gt;\n\n&lt;p&gt;Lately I was playing around with different possible ways of extracting URLs from a give webpage using plain and raw javascript, the idea was to figure out which of the different possible ways is the best and how.&lt;/p&gt;\n\n&lt;p&gt;A simple comparison of different methods is demonstrated in this entry.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;The focus of this writeup  :&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;p&gt;List out the possible ways of extracting URLs.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Do a performance review of them.&lt;/p&gt;&lt;/li&gt;\n&lt;li&gt;&lt;p&gt;Select the best out of the lot.&lt;/p&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/url-scraping-javascript\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Sat, 12 May 2012 07:41:26 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "343 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Download images with node.js",
+    "description": "&lt;p&gt;All of a sudden /me gets silly and crazy thoughts to do useless tasks that just pleases me only!&lt;/p&gt;\n\n&lt;p&gt;Here is one such task, the code below downloads images from a given URI to the filesystem.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/download-images-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;All of a sudden /me gets silly and crazy thoughts to do useless tasks that just pleases me only!&lt;/p&gt;\n\n&lt;p&gt;Here is one such task, the code below downloads images from a given URI to the filesystem.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/download-images-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-11T17:11:12.000Z",
+    "pubdate": "2012-05-11T17:11:12.000Z",
+    "pubDate": "2012-05-11T17:11:12.000Z",
+    "link": "http://h3manth.com/content/download-images-nodejs",
+    "guid": "342 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Download images with node.js"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/download-images-nodejs"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;All of a sudden /me gets silly and crazy thoughts to do useless tasks that just pleases me only!&lt;/p&gt;\n\n&lt;p&gt;Here is one such task, the code below downloads images from a given URI to the filesystem.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/download-images-nodejs\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Fri, 11 May 2012 17:11:12 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "342 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "TypeError: can't convert Regexp into String",
+    "description": "&lt;p&gt;&lt;b&gt;TypeError: can't convert Regexp into String in Ruby&lt;/b&gt; So what?&lt;/p&gt;\n\n&lt;div class=\"ruby\" style=\"font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;\"&gt;&lt;span style=\"color:#008000; font-style:italic;\"&gt;#!/usr/bin/env ruby&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#996600;\"&gt;&amp;quot;hemanth&amp;quot;&lt;/span&gt;.&lt;span style=\"color:#9966CC; font-weight:bold;\"&gt;include&lt;/span&gt;?&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;hem&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#000080; font-style:italic;\"&gt;=begin&lt;br /&gt;\nExectuing the above code will result in :&lt;br /&gt;\nTypeError: can't convert Regexp into String&lt;br /&gt;\n=end&lt;/span&gt;&lt;/div&gt;\n\n&lt;p&gt;&lt;br /&gt;\n&lt;br /&gt;It so happens that the &lt;b&gt; String#include?&lt;/b&gt; takes only a string argument not a regular expression, as the below code makes it clear.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-cant-convert-regexp-string\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;b&gt;TypeError: can't convert Regexp into String in Ruby&lt;/b&gt; So what?&lt;/p&gt;\n\n&lt;div class=\"ruby\" style=\"font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;\"&gt;&lt;span style=\"color:#008000; font-style:italic;\"&gt;#!/usr/bin/env ruby&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#996600;\"&gt;&amp;quot;hemanth&amp;quot;&lt;/span&gt;.&lt;span style=\"color:#9966CC; font-weight:bold;\"&gt;include&lt;/span&gt;?&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;hem&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#000080; font-style:italic;\"&gt;=begin&lt;br /&gt;\nExectuing the above code will result in :&lt;br /&gt;\nTypeError: can't convert Regexp into String&lt;br /&gt;\n=end&lt;/span&gt;&lt;/div&gt;\n\n&lt;p&gt;&lt;br /&gt;\n&lt;br /&gt;It so happens that the &lt;b&gt; String#include?&lt;/b&gt; takes only a string argument not a regular expression, as the below code makes it clear.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-cant-convert-regexp-string\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-05-01T06:14:06.000Z",
+    "pubdate": "2012-05-01T06:14:06.000Z",
+    "pubDate": "2012-05-01T06:14:06.000Z",
+    "link": "http://h3manth.com/content/typeerror-cant-convert-regexp-string",
+    "guid": "340 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "TypeError: can't convert Regexp into String"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/typeerror-cant-convert-regexp-string"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;b&gt;TypeError: can't convert Regexp into String in Ruby&lt;/b&gt; So what?&lt;/p&gt;\n\n&lt;div class=\"ruby\" style=\"font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;\"&gt;&lt;span style=\"color:#008000; font-style:italic;\"&gt;#!/usr/bin/env ruby&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#996600;\"&gt;&amp;quot;hemanth&amp;quot;&lt;/span&gt;.&lt;span style=\"color:#9966CC; font-weight:bold;\"&gt;include&lt;/span&gt;?&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#40;&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;hem&lt;span style=\"color:#006600; font-weight:bold;\"&gt;/&lt;/span&gt;&lt;span style=\"color:#006600; font-weight:bold;\"&gt;&amp;#41;&lt;/span&gt;&lt;br /&gt;\n&lt;span style=\"color:#000080; font-style:italic;\"&gt;=begin&lt;br /&gt;\nExectuing the above code will result in :&lt;br /&gt;\nTypeError: can't convert Regexp into String&lt;br /&gt;\n=end&lt;/span&gt;&lt;/div&gt;\n\n&lt;p&gt;&lt;br /&gt;\n&lt;br /&gt;It so happens that the &lt;b&gt; String#include?&lt;/b&gt; takes only a string argument not a regular expression, as the below code makes it clear.&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/typeerror-cant-convert-regexp-string\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 01 May 2012 06:14:06 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "340 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "One click duckduckgo",
+    "description": "&lt;p&gt;Check out the &lt;a href=\"http://h3manth.com/ddg.ogg\"&gt;ONE CLICK DDG DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Search any text that is selected anywhere in the OS with duckduckgo in a single click is really fun!&lt;br /&gt;\nYes you read it right, may the text be in a document, webpage, terminal anywhere you can imagine and select can be searched with duckduckgo with a single click, using a simple one liner and some easy GUI tricks as in the video.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt; Dependency : &lt;/b&gt; xclip - command line interface to X selections (clipboard)&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/one-click-duckduckgo\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Check out the &lt;a href=\"http://h3manth.com/ddg.ogg\"&gt;ONE CLICK DDG DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Search any text that is selected anywhere in the OS with duckduckgo in a single click is really fun!&lt;br /&gt;\nYes you read it right, may the text be in a document, webpage, terminal anywhere you can imagine and select can be searched with duckduckgo with a single click, using a simple one liner and some easy GUI tricks as in the video.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt; Dependency : &lt;/b&gt; xclip - command line interface to X selections (clipboard)&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/one-click-duckduckgo\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-04-24T14:32:28.000Z",
+    "pubdate": "2012-04-24T14:32:28.000Z",
+    "pubDate": "2012-04-24T14:32:28.000Z",
+    "link": "http://h3manth.com/content/one-click-duckduckgo",
+    "guid": "339 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "One click duckduckgo"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/one-click-duckduckgo"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Check out the &lt;a href=\"http://h3manth.com/ddg.ogg\"&gt;ONE CLICK DDG DEMO&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Search any text that is selected anywhere in the OS with duckduckgo in a single click is really fun!&lt;br /&gt;\nYes you read it right, may the text be in a document, webpage, terminal anywhere you can imagine and select can be searched with duckduckgo with a single click, using a simple one liner and some easy GUI tricks as in the video.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt; Dependency : &lt;/b&gt; xclip - command line interface to X selections (clipboard)&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/one-click-duckduckgo\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 24 Apr 2012 14:32:28 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "339 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Comparing Strings with variable white spacing",
+    "description": "&lt;p&gt;Stings may sound like 101 of programming, but just a glimpse of TAOCP would turn the thought inside out! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings is on of the most common tasks that any programmer would do, but the fun never ends with strings! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings with variable white spacing, is also one among the most common cases, below /me has tried to collect the most intuitive way of doing it in &lt;b&gt;Ruby, Perl, Python and Javascript&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/comparing-strings-variable-white-spacing\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Stings may sound like 101 of programming, but just a glimpse of TAOCP would turn the thought inside out! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings is on of the most common tasks that any programmer would do, but the fun never ends with strings! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings with variable white spacing, is also one among the most common cases, below /me has tried to collect the most intuitive way of doing it in &lt;b&gt;Ruby, Perl, Python and Javascript&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/comparing-strings-variable-white-spacing\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-04-12T13:13:48.000Z",
+    "pubdate": "2012-04-12T13:13:48.000Z",
+    "pubDate": "2012-04-12T13:13:48.000Z",
+    "link": "http://h3manth.com/content/comparing-strings-variable-white-spacing",
+    "guid": "338 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Comparing Strings with variable white spacing"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/comparing-strings-variable-white-spacing"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Stings may sound like 101 of programming, but just a glimpse of TAOCP would turn the thought inside out! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings is on of the most common tasks that any programmer would do, but the fun never ends with strings! &lt;/p&gt;\n\n&lt;p&gt;Comparing Strings with variable white spacing, is also one among the most common cases, below /me has tried to collect the most intuitive way of doing it in &lt;b&gt;Ruby, Perl, Python and Javascript&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/comparing-strings-variable-white-spacing\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Thu, 12 Apr 2012 13:13:48 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "338 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Watir Webdriver attach window",
+    "description": "&lt;p&gt;While porting a watir based automation framework to watir-webdriver, I came across an issue that most have come across, that being : \"In Watir and Selenium Webdrivers, there is no longer an attach met&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/watir-webdriver-attach-window\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;While porting a watir based automation framework to watir-webdriver, I came across an issue that most have come across, that being : \"In Watir and Selenium Webdrivers, there is no longer an attach met&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/watir-webdriver-attach-window\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-04-03T13:13:58.000Z",
+    "pubdate": "2012-04-03T13:13:58.000Z",
+    "pubDate": "2012-04-03T13:13:58.000Z",
+    "link": "http://h3manth.com/content/watir-webdriver-attach-window",
+    "guid": "337 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Watir Webdriver attach window"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/watir-webdriver-attach-window"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;While porting a watir based automation framework to watir-webdriver, I came across an issue that most have come across, that being : \"In Watir and Selenium Webdrivers, there is no longer an attach met&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/watir-webdriver-attach-window\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 03 Apr 2012 13:13:58 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "337 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Remotely enable remote desktop on Debian",
+    "description": "&lt;p&gt;It so happened, as I was working from home last Friday, box there at office had only ssh enabled, but was in need of remote desktop badly [ But default it's not enabled ].&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/remotely-enable-remote-desktop-debian\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;It so happened, as I was working from home last Friday, box there at office had only ssh enabled, but was in need of remote desktop badly [ But default it's not enabled ].&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/remotely-enable-remote-desktop-debian\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-03-10T05:42:22.000Z",
+    "pubdate": "2012-03-10T05:42:22.000Z",
+    "pubDate": "2012-03-10T05:42:22.000Z",
+    "link": "http://h3manth.com/content/remotely-enable-remote-desktop-debian",
+    "guid": "336 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Remotely enable remote desktop on Debian"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/remotely-enable-remote-desktop-debian"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;It so happened, as I was working from home last Friday, box there at office had only ssh enabled, but was in need of remote desktop badly [ But default it's not enabled ].&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/remotely-enable-remote-desktop-debian\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Sat, 10 Mar 2012 05:42:22 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "336 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Android Remote Control Setup",
+    "description": "&lt;p&gt;&lt;b&gt;Control your Android devices while running scripts on your computer!&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;Wonder can be done with ASE and an android device along with scripting languages like Python, Perl, JRuby, Lua, BeanShell, JavaScript, Tcl, and shell. &lt;/p&gt;\n\n&lt;p&gt;Would it not be wonderful to run code on your box and the same being reflected on your android devices ? &lt;/p&gt;\n\n&lt;p&gt;The same is achieved with help of Scripting Layer for Android's remote control.&lt;/p&gt;\n\n&lt;p&gt;Before one uses the script make sure that you have a GNU/Linux box with sudo privileges and an Android device with ASE installed on it. &lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/android-remote-control-setup\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;&lt;b&gt;Control your Android devices while running scripts on your computer!&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;Wonder can be done with ASE and an android device along with scripting languages like Python, Perl, JRuby, Lua, BeanShell, JavaScript, Tcl, and shell. &lt;/p&gt;\n\n&lt;p&gt;Would it not be wonderful to run code on your box and the same being reflected on your android devices ? &lt;/p&gt;\n\n&lt;p&gt;The same is achieved with help of Scripting Layer for Android's remote control.&lt;/p&gt;\n\n&lt;p&gt;Before one uses the script make sure that you have a GNU/Linux box with sudo privileges and an Android device with ASE installed on it. &lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/android-remote-control-setup\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-02-14T16:13:06.000Z",
+    "pubdate": "2012-02-14T16:13:06.000Z",
+    "pubDate": "2012-02-14T16:13:06.000Z",
+    "link": "http://h3manth.com/content/android-remote-control-setup",
+    "guid": "335 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Android Remote Control Setup"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/android-remote-control-setup"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;&lt;b&gt;Control your Android devices while running scripts on your computer!&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;Wonder can be done with ASE and an android device along with scripting languages like Python, Perl, JRuby, Lua, BeanShell, JavaScript, Tcl, and shell. &lt;/p&gt;\n\n&lt;p&gt;Would it not be wonderful to run code on your box and the same being reflected on your android devices ? &lt;/p&gt;\n\n&lt;p&gt;The same is achieved with help of Scripting Layer for Android's remote control.&lt;/p&gt;\n\n&lt;p&gt;Before one uses the script make sure that you have a GNU/Linux box with sudo privileges and an Android device with ASE installed on it. &lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/android-remote-control-setup\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Tue, 14 Feb 2012 16:13:06 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "335 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}, {
+    "title": "Tweaking Command Not Found",
+    "description": "&lt;p&gt;Most of the time in ubuntu, when we come across the message like : \nThe program 'program_name' is currently not installed.  You can install it by typing:\nsudo apt-get install program_name&lt;/p&gt;\n\n&lt;p&gt;We would end-up doing  &lt;b&gt;\"sudo apt-get install program_name\"&lt;/b&gt; and installing it.&lt;/p&gt;\n\n&lt;p&gt;This repeats so why not automate the same? Solving this question, I had to do the below :&lt;/p&gt;\n\n&lt;p&gt;Bash shell has a hook called &lt;b&gt;command_not_found_handle&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/tweaking-command-not-found\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "summary": "&lt;p&gt;Most of the time in ubuntu, when we come across the message like : \nThe program 'program_name' is currently not installed.  You can install it by typing:\nsudo apt-get install program_name&lt;/p&gt;\n\n&lt;p&gt;We would end-up doing  &lt;b&gt;\"sudo apt-get install program_name\"&lt;/b&gt; and installing it.&lt;/p&gt;\n\n&lt;p&gt;This repeats so why not automate the same? Solving this question, I had to do the below :&lt;/p&gt;\n\n&lt;p&gt;Bash shell has a hook called &lt;b&gt;command_not_found_handle&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/tweaking-command-not-found\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;",
+    "date": "2012-02-01T04:59:16.000Z",
+    "pubdate": "2012-02-01T04:59:16.000Z",
+    "pubDate": "2012-02-01T04:59:16.000Z",
+    "link": "http://h3manth.com/content/tweaking-command-not-found",
+    "guid": "334 at http://h3manth.com",
+    "author": "hemanth",
+    "comments": null,
+    "origlink": null,
+    "image": {},
+    "source": {},
+    "categories": [],
+    "enclosures": [],
+    "rss:@": {},
+    "rss:title": {
+        "@": {},
+        "#": "Tweaking Command Not Found"
+    },
+    "rss:link": {
+        "@": {},
+        "#": "http://h3manth.com/content/tweaking-command-not-found"
+    },
+    "rss:description": {
+        "@": {},
+        "#": "&lt;p&gt;Most of the time in ubuntu, when we come across the message like : \nThe program 'program_name' is currently not installed.  You can install it by typing:\nsudo apt-get install program_name&lt;/p&gt;\n\n&lt;p&gt;We would end-up doing  &lt;b&gt;\"sudo apt-get install program_name\"&lt;/b&gt; and installing it.&lt;/p&gt;\n\n&lt;p&gt;This repeats so why not automate the same? Solving this question, I had to do the below :&lt;/p&gt;\n\n&lt;p&gt;Bash shell has a hook called &lt;b&gt;command_not_found_handle&lt;/b&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"http://h3manth.com/content/tweaking-command-not-found\" target=\"_blank\"&gt;read more&lt;/a&gt;&lt;/p&gt;"
+    },
+    "rss:pubdate": {
+        "@": {},
+        "#": "Wed, 01 Feb 2012 04:59:16 +0000"
+    },
+    "dc:creator": {
+        "@": {},
+        "#": "hemanth"
+    },
+    "rss:guid": {
+        "@": {
+            "ispermalink": "false"
+        },
+        "#": "334 at http://h3manth.com"
+    },
+    "meta": {
+        "#ns": [{
+            "xmlns:dc": "http://purl.org/dc/elements/1.1/"
+        }],
+        "@": [{
+            "xml:base": "http://h3manth.com"
+        }],
+        "#type": "rss",
+        "#version": "2.0",
+        "title": "Experiments on GNU/Linux",
+        "description": "If you can dream it, you can do it!",
+        "date": null,
+        "pubdate": null,
+        "pubDate": null,
+        "link": "http://h3manth.com",
+        "xmlurl": null,
+        "xmlUrl": null,
+        "author": null,
+        "language": "en",
+        "favicon": null,
+        "copyright": null,
+        "generator": null,
+        "image": {},
+        "categories": [],
+        "rss:@": {},
+        "rss:title": {
+            "@": {},
+            "#": "Experiments on GNU/Linux"
+        },
+        "rss:link": {
+            "@": {},
+            "#": "http://h3manth.com"
+        },
+        "rss:description": {
+            "@": {},
+            "#": "If you can dream it, you can do it!"
+        },
+        "rss:language": {
+            "@": {},
+            "#": "en"
+        }
+    }
+}]
+
+// Note  : One can further use json as per the need.
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Node-rsj maintained by <a href="https://github.com/hemanth">hemanth</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
