@@ -5,13 +5,10 @@ var FeedParser = require('feedparser')
 
 parser = new FeedParser();
 
-function toJSON(err, meta, articles){
-    if(err) return console.error(err);
-    console.log(JSON.stringify(articles));
-}
-
 function r2j (uri,cb){
-    parser.parseUrl(uri,toJSON);
+    parser.parseUrl(uri,function(err, meta, articles){
+    if(err) return console.error(err);
+    cb(JSON.stringify(articles));
 }
 
 
