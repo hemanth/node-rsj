@@ -3,8 +3,7 @@ var FeedParser = require('feedparser')
 
 parser = new FeedParser();
 
- 
-var jss = [];
+jss = [];
 function toJSON(err, meta, articles){
     if(err) console.error(err);
     else {
@@ -12,10 +11,12 @@ function toJSON(err, meta, articles){
         jss.push(JSON.stringify(article));
         });
     }
-return jss;
 }
 
-var rsj = function x2j(uri){
+var rsj = function (uri){
     parser.parseUrl(uri,toJSON);
+    return jss;
 }
+
+exports.rsj = rsj;
 
