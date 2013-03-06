@@ -8,10 +8,9 @@
     "url": "https://github.com/hemanth/node-rsj.git"
   },
   "main": "rsj",
-  "dependencies": {"request" :  ">= 1.2.0",
-                   "sax" : ">=0.4.0",
-                   "feedparser" : ">=0.9.9"
-                  },
+  "dependencies": {
+    "feedparser": ">=0.9.9"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
