@@ -2,7 +2,7 @@
   "author": "Hemanth.HM <hemanth.hm@gmail.com> (h3manth.com)",
   "name": "rsj",
   "description": "Convert RSS to JSON",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "homepage": "hemanth.github.com/node-rsj",
   "repository": {
     "url": "https://github.com/hemanth/node-rsj.git"
