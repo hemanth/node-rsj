@@ -9,11 +9,17 @@
   },
   "main": "rsj",
   "dependencies": {
-    "feedparser": "<0.16.0"
+    "feedparser": "<0.16.2",
+    "snyk": "^1.21.2"
   },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
